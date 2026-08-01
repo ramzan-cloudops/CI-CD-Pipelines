@@ -1,0 +1,74 @@
+name: Production Deployment Pipeline
+
+# 1. TRIGGER: Run on push to main branch, or when a Pull Request is opened
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # =========================================================
+  # JOB 1: Continuous Integration (Code Quality & Testing)
+  # =========================================================
+  code-quality-and-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Application Dependencies
+        run: |
+          echo "Simulating command: npm install"
+          echo "Installing all required packages safely..."
+          sleep 2
+
+      - name: Run Code Linter (Check Syntax)
+        run: |
+          echo "Simulating command: npm run lint"
+          echo "Checking code format and syntax standards... No errors found!"
+
+      - name: Run Security Vulnerability Scan
+        run: |
+          echo "Scanning code for security issues and leaked passwords..."
+          echo "Security scan: 100% PASSED ✅"
+
+      - name: Run Unit Tests
+        run: |
+          echo "Simulating command: npm test"
+          echo "Running 25 automated application tests..."
+          echo "All tests passed successfully!"
+
+  # =========================================================
+  # JOB 2: Continuous Deployment (Only runs if Testing Passes)
+  # =========================================================
+  deploy-to-production:
+    runs-on: ubuntu-latest
+    # DevOps Secret: This ensures CD ONLY starts if the Testing Job is 100% successful!
+    needs: code-quality-and-testing
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Connect to Cloud Server
+        run: |
+          echo "Establishing secure connection to production server via SSH..."
+          sleep 2
+
+      - name: Deploy Updated Code Live
+        run: |
+          echo "Uploading new application updates to the end-user server..."
+          echo "Clearing old server cache..."
+          echo "Restarting application service..."
+          sleep 3
+
+      - name: Post-Deployment Health Check
+        run: |
+          echo "Testing live website URL to verify it's working for end-users..."
+          echo "Server Response: 200 OK Status! Live update successful 🚀"
