@@ -1,3 +1,6 @@
-# CI/CD Pipelines Learning Journey
+# GitHub Action Practice
+## Concepts 
 
-Hello! I am a beginner DevOps Engineer. I am using this repository to learn and practice writing CI/CD pipelines with GitHub Actions from scratch.
+# workflows
+To create  a GitHub Action  workflows you need a folder called '.github/workflows'
+
