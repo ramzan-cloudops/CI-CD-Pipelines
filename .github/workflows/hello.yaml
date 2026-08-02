@@ -14,7 +14,7 @@ jobs:
     
       - name: Say hello to everyone
       
-      run: echo "HAPPY FRIENDSHIP DAY "
+        run: echo "HAPPY FRIENDSHIP DAY "
 
       
       
