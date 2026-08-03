@@ -1,38 +1,31 @@
 #my workflow name 
-
 name: My-First-Ci-CD-Yaml
 
-on:
-  workflow_dispatch:
-
 jobs:
-
   code:
     runs-on: ubuntu-latest
     steps:
-      - name: Cloning the code 
+      - name: Cloning the code
         run: echo " code cloned "
-        
+
   build:
     runs-on: ubuntu-latest
     steps:
       - name: building the code
         run: echo " code bulded"
-  
+
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: code testing in bg 
-      run: echo " code was tested"
+      - name: code testing in bg
+        run: echo "code was tested"
 
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: code is deploying
         run: echo " code deployed"
-      
 
-    
         
      
 
