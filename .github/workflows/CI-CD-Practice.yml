@@ -1,0 +1,21 @@
+#my workflow name 
+
+name: My-First-Ci-CD-Yaml
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  say_thanks:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ci is runing
+
+        run: echo " Thanks a lot my dear firend "
+      
+
+  
+      
