@@ -7,14 +7,36 @@ on:
 
 jobs:
 
-  say_thanks:
-
+  code:
     runs-on: ubuntu-latest
-
     steps:
-      - name: ci is runing
+      - name: Cloning the code 
+        run: echo " code cloned "
+        
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: building the code
+        run: echo " code bulded"
+  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: code testing in bg 
+      run: echo " code was tested"
 
-        run: echo " Thanks a lot my dear firend "
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code is deploying
+        run: echo " code deployed"
+      
+
+    
+        
+     
+
+      
       
 
   
