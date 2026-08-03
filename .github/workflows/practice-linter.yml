@@ -1,0 +1,20 @@
+name: Auto-linter
+
+on:
+  push:
+
+    paths: "*.py"
+
+jobs:
+
+  code:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout the /c;one the code background
+        uses:  actions/checkout@v7
+    
+      - name: Install Linter 
+
+        run: pip install ruff
