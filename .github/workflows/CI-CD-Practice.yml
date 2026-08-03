@@ -1,6 +1,7 @@
-#my workflow name 
-name: My-First-Ci-CD-Yaml
 
+name: My-First-Ci-CD-Yaml
+on:
+  workflow_dispatch: 
 jobs:
   code:
     runs-on: ubuntu-latest
