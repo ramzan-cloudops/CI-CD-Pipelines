@@ -2,21 +2,22 @@ name: Auto-linter
 
 on:
   push:
-
     paths: "*.py"
 
 jobs:
-
   code:
-
     runs-on: ubuntu-latest
-
+# Here we clone the code from  curent repository 
     steps:
-      - name: checkout the /c;one the code background
+      - name: checkout the/ cone the code
         uses:  actions/checkout@v7
-    
+# Here We setup the python Envirnment
+      - name: Setup the  python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+# Installing the linter 
       - name: Install Linter 
-
         run: pip install ruff
       - name: check the linter
         run: ruff check .
