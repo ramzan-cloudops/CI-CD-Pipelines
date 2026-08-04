@@ -1,6 +1,6 @@
 
 name: My-First-Ci-CD-Yaml
-on:
+on: tty
   workflow_dispatch: 
 jobs:
   code:
@@ -31,6 +31,9 @@ jobs:
         run: echo " code deployed"
       - name: Installing ruff linter  
         run: pip install ruff
+
+      - name: Runn Ruff chheck 
+        run: ruff check .
 
         
 
