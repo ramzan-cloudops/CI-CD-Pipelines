@@ -1,7 +1,10 @@
+from flask import Flask, render_template
+
 # trying to install  python 
 # try to install linter 
 #this is code forked from shubham londahe 
-from flask import Flask, render_template
+
+
 app = Flask(__name__)
 
 
