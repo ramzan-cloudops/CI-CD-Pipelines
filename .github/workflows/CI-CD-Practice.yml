@@ -29,6 +29,12 @@ jobs:
     steps:
       - name: code is deploying
         run: echo " code deployed"
+      - name: Installing ruff linter  
+        run: pip install ruff
+
+        
+
+        
 
         
      
