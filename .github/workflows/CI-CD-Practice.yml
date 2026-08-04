@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cloning the code
-        run:8h echo " code cloned "
+        run: echo " code cloned "
 
   build:
     runs-on: ubuntu-latest
