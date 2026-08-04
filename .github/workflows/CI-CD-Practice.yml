@@ -1,13 +1,13 @@
 
 name: My-First-Ci-CD-Yaml
-on: tty
+on: 
   workflow_dispatch: 
 jobs:
   code:
     runs-on: ubuntu-latest
     steps:
       - name: Cloning the code
-        run: echo " code cloned "
+        run:8h echo " code cloned "
 
   build:
     runs-on: ubuntu-latest
