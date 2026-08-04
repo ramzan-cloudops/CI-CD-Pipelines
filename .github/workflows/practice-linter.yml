@@ -16,6 +16,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.14"
+# here we try to check the python version either python istalled or not 
+      - name: Checking the python version
+        run: python --version
 # Installing the linter 
       - name: Install Linter 
         run: pip install ruff
